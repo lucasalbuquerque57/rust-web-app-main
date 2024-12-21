@@ -10,6 +10,7 @@ use std::{
 use uuid::Uuid;
 
 /**
+
 An identifier for a transaction.
 
 This values are intended to be persisted to disk to record what
@@ -17,6 +18,7 @@ transaction specific changes belonged to.
 
 Transaction ids are independent, so there's nothing connecting the id of an active
 transaction to the one that was created immediately before it.
+
 */
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub struct TransactionId(Uuid);
