@@ -33,12 +33,14 @@ enum TransactionStatus {
 }
 
 /**
+
 An active transaction.
 
 The transaction needs to be passed by reference to methods that want to
 make changes to values. A transaction can either be committed to make its
 changes observable, or it can be cancelled to revert them. Both methods take
 full ownership of the transaction so it can no longer be used.
+
 */
 pub struct Transaction {
     id: TransactionId,
